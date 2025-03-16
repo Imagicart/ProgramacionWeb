@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Compra</title>
+    <style>
+         body{
+                margin: 0;
+                padding: 0;
+                height: 900px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background:linear-gradient(45deg, #f8c7c7, #faa4a4, #f58a8a, #fc6565, #fc3939);
+                font-family: Arial, sans-serif;
+            }
+
+            .login-container {
+                background: #ffffff;
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                width: 400px;
+                text-align: center;
+            }
+
+            .login-container h2 {
+                margin-bottom: 20px;
+                color: #0f1012;
+            }
+
+            .login-container input[type="number"]
+             {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                outline: none;
+            }
+
+            .login-container input[type="submit"] {
+            background: #000000;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 50px;
+             }
+
+             .login-container select{
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                outline: none;
+             }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!--<div class="card">-->
+            <form action="procesos.php" method="post">
+                <h1>Bienvenidos a la Fama El Juan y sus Kilos</h1>
+                <hr>
+                
+                <p>Selecciona el tipo de carne que deseas comprar:</p>
+                <label for="tipo">Tipo de Carne:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">--Seleccione una opción--</option>
+                    <option value="1">Res (Valor por kilo: $20,000)</option>
+                    <option value="2">Cerdo (Valor por kilo: $10,000)</option>
+                    <option value="3">Burro (Valor por kilo: $8,000)</option>
+                </select>
+                <hr>
+
+                <p>Por favor, digite cuántos kilos de carne desea:</p>
+                <label for="cantidad">Cantidad (kg):</label>
+                <input type="number" id="cantidad" name="cantidad" placeholder="Ingrese cantidad en kg" min="1" required>
+                <hr>
+
+                <p>¿Desea bolsa para llevar?</p>
+                <label><input type="radio" name="bolsa" value="1" required> Sí</label>
+                <label><input type="radio" name="bolsa" value="2" required> No</label>
+                <hr>
+
+                <input type="submit" value="Realizar Pedido">
+            </form>
+        <!--</div>-->
+    </div>
+</body>
+</html>

